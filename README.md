@@ -4,17 +4,19 @@ ESP32-C3 based IoT Temperature, Humidity, Air Quality and Air Pressure Sensor wi
 
 ![image](docs/HomeSense%20Render.png)
 
-Initially, the goal was simply to monitor temperature and humidity, but I ended up choosing the BME680 sensor from Bosch, which additionally supports air pressure and air quality measurement.
+Initially, the idea was simply to monitor temperature and humidity wirelessly, however I ended up choosing the BME680 sensor from Bosch, which additionally supports air pressure and air quality measurement.
 
-I knew I primarily wanted to use MQTT to collect data from multiple of these sensor boards. However, I also wanted the ability to log data locally in case Wi-Fi wasn't available, so I also added a microSD card slot and a real-time clock.
+MQTT is the primary way to collect data from these sensor boards. In case Wi-Fi isn't available, I also wanted the ability to log data locally, so I additionally added a microSD card slot and a real-time clock.
 
-I started considering the form factor and whether to use one of the pre-made ESP32-C3 modules. While that would have streamlined the design, I wanted the board to be as small as possible, so I decided against it in the end.
+When considering the form factor I thought about using one of the pre-made ESP32-C3 modules. While that would have streamlined the design, I wanted the board to be as small as possible, so I decided against it in the end.
 
 The case fits a 250mAh battery and also embeds a small magnet in the back lid to allow it to be mounted on magnetic surfaces. I put in a small light pipe for the RGB-LED, a few ventilation holes/slots for the BME680 and a cutout for the microSD card. Fully assembled it measures 15x25x35mm.
 
 Take a look at the design documents for more info:
 - [Schematic](docs/Schematic.pdf)
 - [Assembly Drawing](docs/HomeSense%20Assembly%20Drawing.pdf)
+
+![image](docs/Assembled%20Prototype.jpg)
 
 # Data Acquisition 📊
 
@@ -80,4 +82,4 @@ In order to avoid reporting false temperature and humidity data, the ESP has to 
 
 This also applies while charging the battery. Currently the charge current is configured for 50mA, but this is still enough to increase the temperature readings by a small amount.
 
-The workaround for now is to wait around 10min after the webserver is shut off, before taking the first reading and also disable any readings while charging.
+The workaround for now is to wait around 10min after the webserver is shut off, before taking the first reading and also disable any readings while charging. This isn't a huge problem, since data is only transmitted every 15min.

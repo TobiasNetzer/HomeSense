@@ -1,0 +1,40 @@
+{
+    "layout": {
+        "hspace": "3mm",
+        "vspace": "3mm",
+        "rows": "2",
+        "cols": "3"
+    },
+    "tabs": {
+        "vwidth": "10mm",
+        "hwidth": "15mm",
+        "fillet": "1.5mm"
+    },
+    "cuts": {
+        "type": "vcuts"
+    },
+    "framing": {
+        "type": "frame",
+        "hspace": "3mm",
+        "vspace": "3mm",
+        "fillet": "2.5mm"
+    },
+    "tooling": {
+        "type": "4hole",
+        "hoffset": "2.5mm",
+        "voffset": "2.5mm"
+    },
+    "fiducials": {
+        "type": "4fid",
+        "hoffset": "10mm",
+        "voffset": "2.5mm",
+        "opening": "1.5mm"
+    },
+    "copperfill": {
+        "type": "hatched",
+        "clearance": "1mm",
+        "layers": "F.Cu,B.Cu,In1.Cu,In2.Cu",
+        "width": "0.8mm",
+        "spacing": "0.8mm"
+    }
+}

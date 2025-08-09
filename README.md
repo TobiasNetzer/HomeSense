@@ -4,7 +4,7 @@ ESP32-C3 based IoT Temperature, Humidity, Air Quality and Air Pressure Sensor wi
 
 ![image](docs/HomeSense%20Render.png)
 
-Initially, the idea was simply to monitor temperature and humidity wirelessly. Along the way, I chose the Bosch BME680 sensor, which also provides air pressure and air quality measurements
+Initially, the idea was simply to monitor temperature and humidity wirelessly. Along the way, I chose the Bosch BME680 sensor, which also provides air pressure and air quality measurements.
 
 Sensor data is primarily transmitted via MQTT. To ensure continued operation in the absence of Wi-Fi, the device also supports local data logging using a microSD card and includes a real-time clock (RTC) for accurate timestamps.
 
@@ -28,7 +28,7 @@ To configure the device, I made a super basic webpage, which is hosted by the ES
 
 Once everything is setup, a JSON string containing all the sensor data can be received every 15min by subscribing to the configured MQTT topic. 
 
-Here is an example of the JSON string:
+Here is an example of the data:
 
 ```json
 {

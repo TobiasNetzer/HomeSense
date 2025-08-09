@@ -4,18 +4,20 @@ ESP32-C3 based IoT Temperature, Humidity, Air Quality and Air Pressure Sensor wi
 
 ![image](docs/HomeSense%20Render.png)
 
-Initially, the idea was simply to monitor temperature and humidity wirelessly, however I ended up choosing the BME680 sensor from Bosch, which additionally supports air pressure and air quality measurement.
+Initially, the idea was simply to monitor temperature and humidity wirelessly. Along the way, I chose the Bosch BME680 sensor, which also provides air pressure and air quality measurements
 
-MQTT is the primary way to collect data from these sensor boards. In case Wi-Fi isn't available, I also wanted the ability to log data locally, so I additionally added a microSD card slot and a real-time clock.
+Sensor data is primarily transmitted via MQTT. To ensure continued operation in the absence of Wi-Fi, the device also supports local data logging using a microSD card and includes a real-time clock (RTC) for accurate timestamps.
 
-When considering the form factor I thought about using one of the pre-made ESP32-C3 modules. While that would have streamlined the design, I wanted the board to be as small as possible, so I decided against it in the end.
+When considering the form factor I thought about using one of the pre-made ESP32-C3 modules. While that would have streamlined the design, I wanted the board to be as small as possible, so I went with a fully custom design.
 
-The case fits a 250mAh battery and also embeds a small magnet in the back lid to allow it to be mounted on magnetic surfaces. I put in a small light pipe for the RGB-LED, a few ventilation holes/slots for the BME680 and a cutout for the microSD card. Fully assembled it measures 15x25x35mm.
+The case fits a 250mAh battery and also embeds a small magnet in the back lid to allow it to be mounted on magnetic surfaces. I put in a small light pipe for the RGB-LED, a few ventilation holes/slots for the BME680 and a cutout for the microSD card.
+Fully assembled it measures 15x25x35mm.
 
 Take a look at the design documents for more info:
 - [Schematic](docs/Schematic.pdf)
 - [Assembly Drawing](docs/HomeSense%20Assembly%20Drawing.pdf)
 
+![image](docs/Homesense%20Case.png)
 ![image](docs/Assembled%20Prototype.jpg)
 
 # Data Acquisition 📊

@@ -16,6 +16,7 @@ Fully assembled it measures 15x25x35mm.
 Take a look at the design documents for more info:
 - [Schematic](docs/Schematic.pdf)
 - [Assembly Drawing](docs/HomeSense%20Assembly%20Drawing.pdf)
+- [BOM](https://htmlpreview.github.io/?https://github.com/TobiasNetzer/HomeSense/blob/main/docs/BOM.html)
 
 ![image](docs/Homesense%20Case.png)
 ![image](docs/Assembled%20Prototype.jpg)
